@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+
+# Allow admin pages to be served directly
+[[redirects]]
+  from = "/admin"
+  to = "/admin-index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/"
+  to = "/admin-index.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard.html"
+  status = 200
+
+# Catch-all for SPA (must come AFTER admin rules)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
